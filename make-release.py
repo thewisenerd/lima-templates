@@ -11,6 +11,11 @@ releases = {
 img_url = 'https://cloud-images.ubuntu.com/releases/{}/{}/ubuntu-{}-server-cloudimg-{}.img'
 sha_url = 'https://cloud-images.ubuntu.com/releases/{}/{}/SHA256SUMS'
 
+lima_arch_map = {
+    'amd64': 'x86_64',
+    'arm64': 'aarch64',
+}
+
 
 def format_url_template(version: str, release: str, arch: str) -> str:
     return img_url.format(version, release, version, arch)
@@ -46,7 +51,7 @@ def make_template(version: str, release: str) -> str:
         for arch in ['amd64', 'arm64']:
             images.append({
                 'location': format_url_template(version, x_rel, arch),
-                'arch': arch,
+                'arch': lima_arch_map[arch],
                 'digest': 'sha256:' + hashes[x_rel]['ubuntu-{}-server-cloudimg-{}.img'.format(version, arch)],
             })
 

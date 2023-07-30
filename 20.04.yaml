@@ -1,15 +1,15 @@
 images:
 - location: https://cloud-images.ubuntu.com/releases/20.04/release-20230714/ubuntu-20.04-server-cloudimg-amd64.img
-  arch: amd64
+  arch: x86_64
   digest: sha256:9f050b53e08ca863627742fee47d84092f3d7d0442ab8f55ec1ff3c65a0fe80f
 - location: https://cloud-images.ubuntu.com/releases/20.04/release-20230714/ubuntu-20.04-server-cloudimg-arm64.img
-  arch: arm64
+  arch: aarch64
   digest: sha256:8d667ba72ba4d3d056c1df1c2b013dbcd1275a8ff6f72abe8d05d045ab6fae49
 - location: https://cloud-images.ubuntu.com/releases/20.04/release/ubuntu-20.04-server-cloudimg-amd64.img
-  arch: amd64
+  arch: x86_64
   digest: sha256:9f050b53e08ca863627742fee47d84092f3d7d0442ab8f55ec1ff3c65a0fe80f
 - location: https://cloud-images.ubuntu.com/releases/20.04/release/ubuntu-20.04-server-cloudimg-arm64.img
-  arch: arm64
+  arch: aarch64
   digest: sha256:8d667ba72ba4d3d056c1df1c2b013dbcd1275a8ff6f72abe8d05d045ab6fae49
 mounts:
 - location: /tmp/lima
